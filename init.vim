@@ -290,7 +290,6 @@ autocmd FileType go nmap <leader>gt  <Plug>(go-test)
 
 let g:go_fmt_command = "goimports"
 
-
 " ncm2 配置
 " autocmd BufEnter * call ncm2#enable_for_buffer()
 "autocmd BufEnter * call ncm2#enable_for_buffer()
