@@ -41,6 +41,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'ncm2/ncm2-path'
 "Plug 'ncm2/ncm2-go'
 
+Plug 'preservim/nerdcommenter'
 Plug 'connorholyday/vim-snazzy'
 Plug 'vim-airline/vim-airline'
 " File navigation
@@ -51,6 +52,36 @@ Plug 'kshenoy/vim-signature'
 " Undo Tree
 Plug 'mbbill/undotree/'
 call plug#end()
+
+" ===
+" === NERDCOMMENTER
+" ===
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
 
 " ===
 " === NERDTree
@@ -201,7 +232,8 @@ noremap I 7l
 noremap <C-n> 0
 " I key: go to the end of the line
 noremap <C-i> $
-
+" windows ctrl-v confict so use <LEADER>v replace
+noremap <LEADER>v <C-v>
 " Faster in-line navigation
 noremap W 5w
 noremap B 5b
@@ -311,7 +343,7 @@ let g:go_fmt_command = "goimports"
 
 " coc 配置
 " 给终端窗口更多的空间显示内容
-set cmdheight=13
+set cmdheight=15
 " update time 缩短 默认 4000ms
 set updatetime=300
 " Don't pass messages to |ins-completion-menu|.
@@ -363,7 +395,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <LEADER>k :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
