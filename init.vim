@@ -343,7 +343,7 @@ let g:go_fmt_command = "goimports"
 
 " coc 配置
 " 给终端窗口更多的空间显示内容
-set cmdheight=15
+set cmdheight=5
 " update time 缩短 默认 4000ms
 set updatetime=300
 " Don't pass messages to |ins-completion-menu|.
@@ -497,5 +497,11 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " 这里写可能随着环境改变而改变的配置
 " python3 host 指定 需要先执行 python3 -m pip install pynvim
-"let g:python3_host_prog="/user/bin/python3"
-let g:python3_host_prog="C:\Users\zhang\AppData\Local\Programs\Python\Python37\python.exe"
+if has('unix')
+  let g:python3_host_prog="/user/bin/python3"
+elseif has('win32')
+  let g:python3_host_prog="C:\Users\zhang\AppData\Local\Programs\Python\Python37\python.exe"
+elseif has('mac')
+  let g:python3_host_prog="/user/bin/python3"
+endif
+
