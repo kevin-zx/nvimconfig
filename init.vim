@@ -230,8 +230,21 @@ noremap N 7h
 noremap I 7l
 " N key: go to the start of the line
 noremap <C-n> 0
+inoremap <C-k> <ESC>0i
 " I key: go to the end of the line
 noremap <C-i> $
+" ===
+" === Insert Mode Cursor Movement
+" ===
+inoremap <C-a> <ESC>A
+
+" 括号自动补全
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap " ""<ESC>i
+inoremap ' ''<ESC>i
+inoremap { {}<Left><CR><CR><Up><TAB>
+
 " windows ctrl-v confict so use <LEADER>v replace
 noremap <LEADER>v <C-v>
 " Faster in-line navigation
@@ -242,10 +255,6 @@ noremap k i
 noremap K I
 noremap l u
 
-" ===
-" === Insert Mode Cursor Movement
-" ===
-inoremap <C-a> <ESC>A
 
 
 " ===
@@ -342,10 +351,10 @@ let g:go_fmt_command = "goimports"
 
 
 " coc 配置
-" 给终端窗口更多的空间显示内容
-set cmdheight=5
+" coc-marketplace 通过 CocList marketplace 来安装
+let g:coc_global_extensions = ['coc-json','coc-go','coc-vimlsp','coc-marketplace']
 " update time 缩短 默认 4000ms
-set updatetime=300
+set updatetime=100
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 " Always show the signcolumn, otherwise it would shift the text each time
@@ -356,6 +365,7 @@ if has("patch-8.1.1564")
 else
     set signcolumn=yes
 endif
+
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -395,7 +405,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
-nnoremap <LEADER>k :call <SID>show_documentation()<CR>
+nnoremap <LEADER>d :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
