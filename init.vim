@@ -17,7 +17,7 @@ Plug 'junegunn/vim-easy-align'
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 "
 " " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
-Plug 'fatih/vim-go',{ 'do': ':GoInstallBinares' }
+Plug 'fatih/vim-go'
 "
 " " Plugin options
 Plug 'nsf/gocode'
@@ -45,12 +45,13 @@ Plug 'preservim/nerdcommenter'
 Plug 'connorholyday/vim-snazzy'
 Plug 'vim-airline/vim-airline'
 " File navigation
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 " Bookmarks
 Plug 'kshenoy/vim-signature'
 " Undo Tree
 Plug 'mbbill/undotree/'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " ===
@@ -86,32 +87,32 @@ let g:NERDToggleCheckAllLines = 1
 " ===
 " === NERDTree
 " ===
-map tt :NERDTreeToggle<CR>
-let NERDTreeMapOpenExpl = ""
-let NERDTreeMapUpdir = ""
-let NERDTreeMapUpdirKeepOpen = "l"
-let NERDTreeMapOpenSplit = ""
-let NERDTreeOpenVSplit = ""
-let NERDTreeMapActivateNode = "i"
-let NERDTreeMapOpenInTab = "o"
-let NERDTreeMapPreview = ""
-let NERDTreeMapCloseDir = "n"
-let NERDTreeMapChangeRoot = "y"
+" map tt :NERDTreeToggle<CR>
+" let NERDTreeMapOpenExpl = ""
+" let NERDTreeMapUpdir = ""
+" let NERDTreeMapUpdirKeepOpen = "l"
+" let NERDTreeMapOpenSplit = ""
+" let NERDTreeOpenVSplit = ""
+" let NERDTreeMapActivateNode = "i"
+" let NERDTreeMapOpenInTab = "o"
+" let NERDTreeMapPreview = ""
+" let NERDTreeMapCloseDir = "n"
+" let NERDTreeMapChangeRoot = "y"
 
 " ==
 " == NERDTree-git
 " ==
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
+" let g:NERDTreeIndicatorMapCustom = {
+"     \ "Modified"  : "✹",
+"     \ "Staged"    : "✚",
+"     \ "Untracked" : "✭",
+"     \ "Renamed"   : "➜",
+"     \ "Unmerged"  : "═",
+"     \ "Deleted"   : "✖",
+"     \ "Dirty"     : "✗",
+"     \ "Clean"     : "✔︎",
+"     \ "Unknown"   : "?"
+"     \ }
 
 
 " ===
@@ -182,7 +183,7 @@ set ignorecase
 " 搜索自动大小写
 set smartcase
 " 一直在文件下显示5行
-colorscheme snazzy
+"colorscheme snazzy
 
 set scrolloff=5
 set nocompatible
@@ -192,6 +193,9 @@ filetype plugin on
 filetype plugin indent on
 set mouse=a
 set encoding=utf-8
+" set font
+let g:airline_powerline_fonts = 1
+set guifont=DroidSansMono_Nerd_Font:h11
 " 修复某些终端的配色问题
 let &t_ut=''
 set expandtab
@@ -351,12 +355,43 @@ let g:go_fmt_command = "goimports"
 
 
 " coc 配置
+
+" coc-explorer 配置
+nnoremap tt :CocCommand explorer<CR>
+
+" coc-snippets 配置
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" Use <leader>x for convert visual selected code to snippet
+xmap <leader>x  <Plug>(coc-convert-snippet)
+
 " coc-marketplace 通过 CocList marketplace 来安装
-let g:coc_global_extensions = ['coc-json','coc-go','coc-vimlsp','coc-marketplace']
+let g:coc_global_extensions = [
+  \ 'coc-json',
+  \ 'coc-go',
+  \ 'coc-vimlsp',
+  \ 'coc-marketplace',
+  \ 'coc-snippets',
+  \ 'coc-explorer']
 " update time 缩短 默认 4000ms
 set updatetime=100
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
+" 保证在文件相互跳转的时候，未保存文件不会造成影响
+set hidden
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 if has("patch-8.1.1564")
@@ -393,6 +428,7 @@ endif
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+" 切换报错信息
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -437,6 +473,9 @@ augroup end
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
+function! s:cocActionsOpenFromSelected(type) abort
+  execute 'CocCommand actions.open ' . a:type
+endfunction
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 
@@ -508,10 +547,10 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " 这里写可能随着环境改变而改变的配置
 " python3 host 指定 需要先执行 python3 -m pip install pynvim
 if has('unix')
-  let g:python3_host_prog="/user/bin/python3"
+  let g:python3_host_prog="/usr/bin/python3"
 elseif has('win32')
   let g:python3_host_prog="C:\Users\zhang\AppData\Local\Programs\Python\Python37\python.exe"
 elseif has('mac')
-  let g:python3_host_prog="/user/bin/python3"
+  let g:python3_host_prog="/usr/bin/python3"
 endif
 
