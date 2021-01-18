@@ -110,7 +110,7 @@
 			"trace.server": "verbose",
 			"filetypes": ["go"],
 			"initializationOptions": {
-				"usePlaceholders":false
+				"usePlaceholders": true
 			}
 		}
 	}

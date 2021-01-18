@@ -247,7 +247,7 @@ inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
 inoremap " ""<ESC>i
 inoremap ' ''<ESC>i
-inoremap { {}<Left><CR><CR><Up><TAB>
+" inoremap { {}<Left><CR><CR><Up><TAB>
 
 " windows ctrl-v confict so use <LEADER>v replace
 noremap <LEADER>v <C-v>
