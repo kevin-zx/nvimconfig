@@ -40,7 +40,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'ncm2/ncm2-bufword'
 "Plug 'ncm2/ncm2-path'
 "Plug 'ncm2/ncm2-go'
+" cs'" 将单引号转化为双引号
+" S{ 将文本使用大括号包围
+Plug 'tpope/vim-surround'
+" <CR> 选中当前块 两次选中更大块
+Plug 'gcmt/wildfire.vim'
 
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'preservim/nerdcommenter'
 Plug 'connorholyday/vim-snazzy'
 Plug 'vim-airline/vim-airline'
@@ -206,7 +212,7 @@ set shiftwidth=2
 set softtabstop=2
 " 显示行尾的空格
 set list
-set listchars=tab:▸\ ,trail:▫
+set listchars=tab:\|\ ,trail:▫
 " 缩进的配置
 set tw=0
 set indentexpr=
@@ -232,6 +238,7 @@ noremap U 5k
 noremap E 5j
 noremap N 7h
 noremap I 7l
+noremap z e
 " N key: go to the start of the line
 noremap <C-n> 0
 inoremap <C-k> <ESC>0i
