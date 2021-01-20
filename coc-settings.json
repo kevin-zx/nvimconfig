@@ -68,7 +68,7 @@
 		"gh": "collapseRecursive",
 		"i": "open",
 		"<cr>": "open",
-		"I": "openInVsplit",
+		"H": "openInVsplit",
 		"o": "expand",
 		"O": "openInTab",
 		"n": "collapse",
