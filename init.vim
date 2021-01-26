@@ -190,7 +190,7 @@ set ignorecase
 set smartcase
 " 一直在文件下显示5行
 "colorscheme snazzy
-
+"set syntax=on
 set scrolloff=5
 set nocompatible
 filetype on
