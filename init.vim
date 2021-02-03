@@ -390,6 +390,7 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-go',
   \ 'coc-vimlsp',
+  \ 'coc-tsserver',
   \ 'coc-marketplace',
   \ 'coc-snippets',
   \ 'coc-explorer']
