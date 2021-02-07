@@ -34,6 +34,9 @@ Plug 'kshenoy/vim-signature'
 " Undo Tree
 Plug 'mbbill/undotree/'
 Plug 'ryanoasis/vim-devicons'
+
+" which key
+Plug 'liuchengxu/vim-which-key'
 call plug#end()
 
 " Automatically install missing plugins on startup
