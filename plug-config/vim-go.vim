@@ -8,3 +8,4 @@ nmap <leader>gr :!go run %<cr>
 autocmd FileType go nmap <leader>gt  <Plug>(go-test)
 
 let g:go_fmt_command = "goimports"
+let g:go_doc_keywordprg_enabled = 0

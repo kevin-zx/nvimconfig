@@ -114,7 +114,7 @@ noremap = n
 vnoremap < <gv
 vnoremap > >gv
 
-" esc 
+" esc
 inoremap jk <Esc>
 inoremap kj <Esc>
 
