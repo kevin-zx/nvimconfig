@@ -60,8 +60,8 @@
 	"explorer.keyMappingMode": "none",
 	"explorer.buffer.showHiddenBuffers": false,
   "explorer.keyMappings.global": {
-		"j": "nodePrev",
-		"k": "nodeNext",
+		"k": "nodePrev",
+		"j": "nodeNext",
 		"h": "toggleSelection",
 		"<tab>": "actionMenu",
 		"gl": "expandRecursive",

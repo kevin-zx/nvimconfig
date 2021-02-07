@@ -37,6 +37,8 @@ Plug 'ryanoasis/vim-devicons'
 
 " which key
 Plug 'liuchengxu/vim-which-key'
+" startify project manager
+Plug 'mhinz/vim-startify'
 call plug#end()
 
 " Automatically install missing plugins on startup

@@ -73,3 +73,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
+autocmd VimEnter *
+               \   if !argc()
+               \ |   Startify
+               \ | endif
