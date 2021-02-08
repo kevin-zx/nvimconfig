@@ -38,8 +38,8 @@
   "list.previousKeymap": "<C-u>",
   "list.nextKeymap": "<C-e>",
   "diagnostic.refreshOnInsertMode": false,
+  "coc.preferences.snippetStatusText": "Ⓢ ",
   "snippets.ultisnips.directories": [
-    "UltiSnips",
     "$HOME/.config/nvim/Ultisnips/"
   ],
   "explorer.width": 38,
