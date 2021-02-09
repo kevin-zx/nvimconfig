@@ -98,6 +98,10 @@ map tu :tabe<CR>
 map th :-tabnext<CR>
 " 切换到右标签
 map tl :+tabnext<CR>
+" move current tab to left
+noremap tmh :-tabmove<CR>
+" move current tab to right
+noremap tml :+tabmove<CR>
 
 " 将左右分屏改为上下分屏
 " map sv <C-w>t<C-w>H
