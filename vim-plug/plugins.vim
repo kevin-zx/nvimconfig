@@ -46,6 +46,11 @@ Plug 'unblevable/quick-scope'
 
 " ranger
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+
+" fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
 call plug#end()
 
 " Automatically install missing plugins on startup
