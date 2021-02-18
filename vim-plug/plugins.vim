@@ -43,6 +43,9 @@ Plug 'mhinz/vim-startify'
 
 " quickscope 
 Plug 'unblevable/quick-scope'
+
+" ranger
+Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 call plug#end()
 
 " Automatically install missing plugins on startup
