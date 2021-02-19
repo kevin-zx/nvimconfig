@@ -86,6 +86,13 @@ map <LEADER>k <C-w>k
 map <LEADER>h <C-w>h
 map <LEADER>j <C-w>j
 
+
+" 使用 ctrl + 方向键调整窗口大小
+nnoremap <silent> <C-Up>    :resize -2<CR>
+nnoremap <silent> <C-Down>  :resize +2<CR>
+nnoremap <silent> <C-Left>  :vertical resize -2<CR>
+nnoremap <silent> <C-Right> :vertical resize +2<CR>
+
 " 上下左右键对多窗口进行大小调整
 " map <up> :res +5<CR>
 " map <down> :res -5<CR>
@@ -140,10 +147,3 @@ nnoremap J 5j
 nnoremap H 7h
 nnoremap K 5k
 nnoremap L 5l
-
-" 使用 ctrl + 方向键调整窗口大小
-nnoremap <silent> <C-Up>    :resize -2<CR>
-nnoremap <silent> <C-Down>  :resize +2<CR>
-nnoremap <silent> <C-Left>  :vertical resize -2<CR>
-nnoremap <silent> <C-Right> :vertical resize +2<CR>
-
