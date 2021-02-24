@@ -46,7 +46,6 @@ filetype plugin indent on
 set mouse=a
 set encoding=utf-8
 " set font
-let g:airline_powerline_fonts = 1
 set guifont=DroidSansMono_Nerd_Font:h11
 " 修复某些终端的配色问题
 let &t_ut=''

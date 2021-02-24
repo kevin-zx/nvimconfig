@@ -28,7 +28,10 @@ Plug 'gcmt/wildfire.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'preservim/nerdcommenter'
 Plug 'connorholyday/vim-snazzy'
+
+" airline
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Bookmarks
 Plug 'kshenoy/vim-signature'
 " Undo Tree
