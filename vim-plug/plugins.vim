@@ -28,7 +28,10 @@ Plug 'gcmt/wildfire.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'preservim/nerdcommenter'
 Plug 'connorholyday/vim-snazzy'
+
+" airline
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Bookmarks
 Plug 'kshenoy/vim-signature'
 " Undo Tree
@@ -51,6 +54,9 @@ Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
+
+" gruvbox
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 " Automatically install missing plugins on startup
