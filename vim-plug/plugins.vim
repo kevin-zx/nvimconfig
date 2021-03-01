@@ -54,6 +54,9 @@ Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
+
+" gruvbox
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 " Automatically install missing plugins on startup
