@@ -34,12 +34,13 @@ noremap <LEADER><CR> :nohlsearch<CR>
 " === Insert Mode Cursor Movement
 " ===
 inoremap <C-a> <ESC>A
+inoremap <C-o> <ESC>o
 
 " 括号自动补全
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-inoremap " ""<ESC>i
-inoremap ' ''<ESC>i
+" inoremap ( ()<ESC>i
+" inoremap [ []<ESC>i
+" inoremap " ""<ESC>i
+" inoremap ' ''<ESC>i
 " inoremap { {}<Left><CR><CR><Up><TAB>
 
 " windows ctrl-v confict so use <LEADER>v replace
