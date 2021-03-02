@@ -103,13 +103,13 @@ nnoremap <silent> <C-Right> :vertical resize +2<CR>
 " 设置tabe页
 map tu :tabe<CR>
 " 切换到左标签
-map th :-tabnext<CR>
+map <silent> th :-tabnext<CR>
 " 切换到右标签
-map tl :+tabnext<CR>
+map <silent> tl :+tabnext<CR>
 " move current tab to left
-noremap tmh :-tabmove<CR>
+noremap <silent> tmh :-tabmove<CR>
 " move current tab to right
-noremap tml :+tabmove<CR>
+noremap <silent> tml :+tabmove<CR>
 
 " 将左右分屏改为上下分屏
 " map sv <C-w>t<C-w>H
@@ -148,3 +148,16 @@ nnoremap J 5j
 nnoremap H 7h
 nnoremap K 5k
 nnoremap L 5l
+
+" 每次保存都会清除行尾空格
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+augroup THE_PRIMEAGEN
+    autocmd!
+    autocmd BufWritePre * :call TrimWhitespace()
+    autocmd BufEnter,BufWinEnter,TabEnter *.rs :lua require'lsp_extensions'.inlay_hints{}
+augroup END
