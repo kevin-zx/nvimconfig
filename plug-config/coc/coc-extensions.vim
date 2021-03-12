@@ -7,5 +7,6 @@ let g:coc_global_extensions = [
   \ 'coc-marketplace',
   \ 'coc-snippets',
   \ 'coc-explorer',
+  \ 'coc-flutter',
   \ 'coc-markdownlint',
   \ 'coc-git']

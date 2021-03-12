@@ -7,7 +7,7 @@ nnoremap tt :CocCommand explorer<CR>
 " CocCommand workspace.showOutput snippets
 " 通过这个命令可以查找snippet是否加载成功
 " Use <C-l> for trigger snippet expand.
-imap <C-l> <Plug>(coc-snippets-expand)
+" imap <C-l> <Plug>(coc-snippets-expand)
 
 " Use <C-j> for select text for visual placeholder of snippet.
 vmap <C-j> <Plug>(coc-snippets-select)

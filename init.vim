@@ -15,6 +15,7 @@ source $HOME/.config/nvim/plug-config/ranger.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/gruvbox.vim
+source $HOME/.config/nvim/plug-config/coc-flutter.vim
 
 
 

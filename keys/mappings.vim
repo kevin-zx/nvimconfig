@@ -26,10 +26,11 @@ noremap <LEADER><CR> :nohlsearch<CR>
 
 " N key: go to the start of the line
 " noremap <C-n> 0
+noremap <C-h> ^
 " inoremap <C-k> <ESC>0i
 
 " I key: go to the end of the line
-" noremap <C-i> $
+noremap <C-l> $
 " ===
 " === Insert Mode Cursor Movement
 " ===

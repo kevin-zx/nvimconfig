@@ -36,7 +36,8 @@
   "codeLens.enable": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "go",
-    "ts"
+    "ts",
+    "dart"
   ],
   "list.previousKeymap": "<C-u>",
   "list.nextKeymap": "<C-e>",
@@ -104,5 +105,6 @@
     "]c": "gitNext",
     "<<": "gitStage",
     ">>": "gitUnstage"
-  }
+  },
+  "flutter.lsp.initialization.closingLabels": true
 }

@@ -44,7 +44,7 @@ Plug 'liuchengxu/vim-which-key'
 " startify project manager
 Plug 'mhinz/vim-startify'
 
-" quickscope 
+" quickscope
 Plug 'unblevable/quick-scope'
 
 " ranger
@@ -57,6 +57,9 @@ Plug 'airblade/vim-rooter'
 
 " gruvbox
 Plug 'morhetz/gruvbox'
+
+" dart vim
+Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 
 " Automatically install missing plugins on startup
