@@ -90,11 +90,17 @@ map <LEADER>j <C-w>j
 
 
 " 使用 ctrl + 方向键调整窗口大小
-nnoremap <silent> <C-Up>    :resize -2<CR>
-nnoremap <silent> <C-Down>  :resize +2<CR>
-nnoremap <silent> <C-Left>  :vertical resize -2<CR>
-nnoremap <silent> <C-Right> :vertical resize +2<CR>
-
+if has('mac')
+  nnoremap <silent> <c-k>    :resize -2<cr>
+  nnoremap <silent> <c-k>  :resize +2<cr>
+  nnoremap <silent> <c-h>  :vertical resize -2<cr>
+  nnoremap <silent> <c-l> :vertical resize +2<cr>
+else
+  nnoremap <silent> <c-up>    :resize -2<cr>
+  nnoremap <silent> <c-down>  :resize +2<cr>
+  nnoremap <silent> <c-left>  :vertical resize -2<cr>
+  nnoremap <silent> <c-right> :vertical resize +2<cr>
+endif
 " 上下左右键对多窗口进行大小调整
 " map <up> :res +5<CR>
 " map <down> :res -5<CR>
