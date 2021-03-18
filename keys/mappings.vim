@@ -91,10 +91,10 @@ map <LEADER>j <C-w>j
 
 " 使用 ctrl + 方向键调整窗口大小
 if has('mac')
-  nnoremap <silent> <c-k>    :resize -2<cr>
-  nnoremap <silent> <c-k>  :resize +2<cr>
-  nnoremap <silent> <c-h>  :vertical resize -2<cr>
-  nnoremap <silent> <c-l> :vertical resize +2<cr>
+  nnoremap <silent> <c-K>    :resize -2<cr>
+  nnoremap <silent> <c-J>  :resize +2<cr>
+  nnoremap <silent> <c-H>  :vertical resize -2<cr>
+  nnoremap <silent> <c-L> :vertical resize +2<cr>
 else
   nnoremap <silent> <c-up>    :resize -2<cr>
   nnoremap <silent> <c-down>  :resize +2<cr>
@@ -168,3 +168,5 @@ augroup THE_PRIMEAGEN
     autocmd BufWritePre * :call TrimWhitespace()
     autocmd BufEnter,BufWinEnter,TabEnter *.rs :lua require'lsp_extensions'.inlay_hints{}
 augroup END
+
+vmap * y:let @/ = @"<CR>

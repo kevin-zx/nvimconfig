@@ -60,6 +60,9 @@ Plug 'morhetz/gruvbox'
 
 " dart vim
 Plug 'dart-lang/dart-vim-plugin'
+
+" translate
+Plug 'voldikss/vim-translator'
 call plug#end()
 
 " Automatically install missing plugins on startup
