@@ -11,7 +11,8 @@ set showcmd
 set wildmenu
 " 继承前一行的缩进
 set autoindent
-
+" 列提示线
+set cc=120
 
 " update time 缩短 默认 4000ms
 set updatetime=100
