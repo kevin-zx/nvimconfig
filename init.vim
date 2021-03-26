@@ -3,7 +3,6 @@ source $HOME/.config/nvim/general/setting.vim
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/keys/which-key.vim
 
-
 " Plugin Configuration
 source $HOME/.config/nvim/plug-config/nerdcommenter.vim
 source $HOME/.config/nvim/plug-config/vim-go.vim

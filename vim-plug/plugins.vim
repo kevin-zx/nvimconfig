@@ -63,6 +63,9 @@ Plug 'dart-lang/dart-vim-plugin'
 
 " translate
 Plug 'voldikss/vim-translator'
+
+" git
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Automatically install missing plugins on startup
