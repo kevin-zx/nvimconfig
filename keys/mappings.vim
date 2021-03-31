@@ -25,8 +25,8 @@ noremap <LEADER><CR> :nohlsearch<CR>
 " noremap z e
 
 " N key: go to the start of the line
-" noremap <C-n> 0
-" noremap <C-h> ^
+noremap <C-l> $
+noremap <C-h> ^
 " inoremap <C-k> <ESC>0i
 
 " I key: go to the end of the line
@@ -90,17 +90,17 @@ map <LEADER>j <C-w>j
 
 
 " 使用 ctrl + 方向键调整窗口大小
-if has('mac')
-  nnoremap <silent> <C-K> :resize -2<cr>
-  nnoremap <silent> <C-J> :resize +2<cr>
-  nnoremap <silent> <C-H> :vertical resize -2<cr>
-  nnoremap <silent> <C-L> :vertical resize +2<cr>
-else
+" if has('mac')
+  " nnoremap <silent> <C-K> :resize -2<cr>
+  " nnoremap <silent> <C-J> :resize +2<cr>
+  " nnoremap <silent> <C-H> :vertical resize -2<cr>
+  " nnoremap <silent> <C-L> :vertical resize +2<cr>
+" else
   nnoremap <silent> <C-up>    :resize -2<cr>
   nnoremap <silent> <C-down>  :resize +2<cr>
   nnoremap <silent> <C-left>  :vertical resize -2<cr>
   nnoremap <silent> <C-right> :vertical resize +2<cr>
-endif
+" endif
 " 上下左右键对多窗口进行大小调整
 " map <up> :res +5<CR>
 " map <down> :res -5<CR>
