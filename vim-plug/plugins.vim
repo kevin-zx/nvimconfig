@@ -66,6 +66,7 @@ Plug 'voldikss/vim-translator'
 
 " git
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 call plug#end()
 
 " Automatically install missing plugins on startup
