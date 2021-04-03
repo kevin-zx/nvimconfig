@@ -74,7 +74,7 @@ map S :w<CR>
 " 大写 Q 退出
 map Q :q<CR>
 " 将冒号映射为分号避免按错
-map ; :
+" map ; :
 
 "  右左上下分屏
 map sl :set splitright<CR>:vsplit<CR>
