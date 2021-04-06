@@ -38,7 +38,7 @@ set ignorecase
 set smartcase
 " 一直在文件下显示5行
 "colorscheme snazzy
-set scrolloff=5
+set scrolloff=10
 set nocompatible
 filetype on
 filetype indent on
