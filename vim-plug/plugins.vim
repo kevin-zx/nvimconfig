@@ -67,6 +67,9 @@ Plug 'voldikss/vim-translator'
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
+
+" copilot
+Plug 'github/copilot.vim'
 call plug#end()
 
 " Automatically install missing plugins on startup
