@@ -67,6 +67,10 @@ set backspace=indent,eol,start
 set foldmethod=indent
 set foldlevel=99
 set laststatus=2
+
+" 自动加载修改
+set autoread
+
 "set autochdir
 " 关闭文件再打开后光标回到上一次的位置
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
