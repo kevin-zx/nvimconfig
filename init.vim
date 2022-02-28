@@ -16,7 +16,7 @@ source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/gruvbox.vim
 source $HOME/.config/nvim/plug-config/coc-flutter.vim
 source $HOME/.config/nvim/plug-config/translator.vim
-
+source $HOME/.config/nvim/plug-config/coplit.vim
 
 
 
