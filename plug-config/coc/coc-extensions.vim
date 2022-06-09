@@ -6,6 +6,7 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-marketplace',
   \ 'coc-snippets',
+  \ 'coc-html',
   \ 'coc-explorer',
   \ 'coc-flutter',
   \ 'coc-markdownlint',
