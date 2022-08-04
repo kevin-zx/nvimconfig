@@ -9,5 +9,6 @@ let g:coc_global_extensions = [
   \ 'coc-html',
   \ 'coc-explorer',
   \ 'coc-flutter',
+  \ 'coc-vetur',
   \ 'coc-markdownlint',
   \ 'coc-git']
