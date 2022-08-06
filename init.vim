@@ -17,6 +17,10 @@ source $HOME/.config/nvim/plug-config/gruvbox.vim
 source $HOME/.config/nvim/plug-config/coc-flutter.vim
 source $HOME/.config/nvim/plug-config/translator.vim
 source $HOME/.config/nvim/plug-config/coplit.vim
+source $HOME/.config/nvim/plug-config/dap-go.vim
+source $HOME/.config/nvim/plug-config/dap.vim
+source $HOME/.config/nvim/plug-config/dap-ui.vim
+source $HOME/.config/nvim/plug-config/nvim-dap-virtual-text.vim
 
 
 

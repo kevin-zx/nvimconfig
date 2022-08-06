@@ -16,6 +16,16 @@ Plug 'fatih/vim-go'
 " Plugin options
 Plug 'nsf/gocode'
 
+" Go debugging
+" dap
+Plug 'mfussenegger/nvim-dap'
+Plug 'leoluz/nvim-dap-go'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'theHamsta/nvim-dap-virtual-text'
+Plug 'nvim-telescope/telescope-dap.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+
 " Initialize plugin system
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
