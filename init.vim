@@ -21,6 +21,7 @@ source $HOME/.config/nvim/plug-config/dap-go.vim
 source $HOME/.config/nvim/plug-config/dap.vim
 source $HOME/.config/nvim/plug-config/dap-ui.vim
 source $HOME/.config/nvim/plug-config/nvim-dap-virtual-text.vim
+source $HOME/.config/nvim/plug-config/undotree.vim
 
 
 
