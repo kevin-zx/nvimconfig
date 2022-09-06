@@ -16,6 +16,9 @@ Plug 'fatih/vim-go'
 " Plugin options
 Plug 'nsf/gocode'
 
+Plug 'ray-x/go.nvim'
+Plug 'ray-x/guihua.lua' " recommanded if need floating window support
+
 " Go debugging
 " dap
 Plug 'mfussenegger/nvim-dap'
