@@ -136,6 +136,11 @@ vnoremap > >gv
 " esc
 inoremap jk <Esc>
 inoremap kj <Esc>
+inoremap <C-e> ``<Esc>ha
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+inoremap · `
+
 
 " 使用ctrl c 来代替 escape
 nnoremap <silent> <C-c> <Esc>

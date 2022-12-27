@@ -83,6 +83,10 @@ Plug 'junegunn/gv.vim'
 
 " copilot
 Plug 'github/copilot.vim'
+
+" lsp
+Plug 'neovim/nvim-lspconfig'
+
 call plug#end()
 
 " Automatically install missing plugins on startup
