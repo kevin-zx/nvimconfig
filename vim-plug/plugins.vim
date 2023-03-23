@@ -58,7 +58,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'mhinz/vim-startify'
 
 " quickscope
-Plug 'unblevable/quick-scope'
+" Plug 'unblevable/quick-scope'
 
 " ranger
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
