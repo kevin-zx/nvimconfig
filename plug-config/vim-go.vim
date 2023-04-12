@@ -4,10 +4,17 @@
 autocmd FileType go nmap <leader>gb  <Plug>(go-build)
 
 nmap <leader>gr :!go run %<cr>
+
 " test快捷键
 autocmd FileType go nmap <leader>gt  <Plug>(go-test)
 
 nmap <leader>gf :GoFillStruct <CR><Plug>(go-test)
 
+nmap gn :vsplit\|GoDef <CR>
+
+" nmap gv :vsplit\|<Plug>(coc-implementation)<CR>
+" nnoremap <leader>i :vsplit | execute 'CocCommand implementation'<CR>
+" nnoremap <silent> gv :vsplit | execute 'normal! `[' | normal! gi<CR><CR><CR>
+" nnoremap gv :vertical gi<CR>
 let g:go_fmt_command = "goimports"
 let g:go_doc_keywordprg_enabled = 0
